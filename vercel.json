@@ -1,12 +1,11 @@
 {
-  "build": {
-    "env": {
-      "CI": "true"
-    },
-    "functions": {
-      "preBuild": {
-        "command": "npx playwright install"
-      }
+  "builds": [
+    { "src": "package.json", "use": "@vercel/node" }
+  ],
+  "version": 2,
+  "functions": {
+    "preBuild": {
+      "command": "npx playwright install"
     }
   }
 }
