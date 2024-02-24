@@ -1,0 +1,12 @@
+{
+  "build": {
+    "env": {
+      "CI": "true" // Necessary for some CI systems
+    },
+    "functions": {
+      "preBuild": {
+        "command": "npx playwright install"
+      }
+    }
+  }
+}
